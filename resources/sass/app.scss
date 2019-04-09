@@ -1,13 +1,22 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
 
+// font-awesome
+@import 'node_modules/font-awesome/scss/font-awesome';
+
+// bulma
+@import "node_modules/bulma/bulma";
+
+
+// buefy
+@import "node_modules/buefy/src/scss/buefy";
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
