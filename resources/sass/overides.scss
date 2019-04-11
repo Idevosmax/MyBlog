@@ -1,0 +1,70 @@
+body{
+    background-color:whitesmoke;
+}
+html{
+    background-color :whitesmoke;
+}
+
+.dropdown{
+    position: relative;
+
+    .dropdown-menu{
+        display: none;
+        position: absolute;
+        left: 0;
+        top : 102%;
+        z-index: 1000;
+        background-color: white;
+        min-width: 200px;
+        text-align: left;
+        box-shadow: 0 0 1px rgba(57, 70, 78, .15), 0 20px 55px -8px rgba(57, 70, 78, .25); 
+
+        li{
+            &.seperator{
+                border-top: 1px solid #cccccc;
+                margin: 5px 0px; 
+                
+            }
+            &> a{
+                margin: 5px 0 ;
+                padding: 5px 0 5px 10px;
+                display: block;
+                &:hover{
+                    background-color: whitesmoke;
+                    
+                }
+            }
+        }
+    }
+    &.is-alligned-right .dropdown-menu{
+        right: o;
+        left: auto;
+    }
+    &.is-open .dropdown-menu{
+        display: block;
+    }
+}
+.dropdown-overflow{
+    overflow: visible;
+}
+
+button.navbar-item{
+    background-color: white;
+    border: none;
+    color : $text-light;
+    &:hover{
+       color : $link-active;
+    }
+}
+.navbar{
+    height: 4.5rem;
+}
+.navbar-item img {
+    max-height: 2.5rem;
+}
+.is-muted{
+    color: rgba(102, 100, 98, 0.863);
+}
+.box-shadow-card{
+    box-shadow: 0 0 1px rgba(57, 70, 78, .15), 0 20px 55px -8px rgba(57, 70, 78, .25);
+}

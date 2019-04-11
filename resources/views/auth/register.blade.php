@@ -1,7 +1,77 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
+<div class="columns">
+    <div class="column is-one-third is-offset-one-third m-t-50">
+        <div class="card box-shadow-card">
+            <div class="card-content">
+                <h2 class="title has-text-centered">Join The Community</h2>
+            <form action="{{route('register')}}" method='POST' role='form'>
+            {{ csrf_field() }}
+                <div class="field">
+                    <label for="name m-t-20"> Username</label>
+                    <div class="control">
+                    <input type="text" name='name' class="input {{$errors->has('name') ? 'is-danger' : 'is-info' }}" id='name' placeholder="Enter Username" value="{{ old('name') }}" required> 
+
+                    </div>
+                    @if ($errors->has('name'))
+                            <p class="help m-t-5 is-danger">{{$errors->first('name')}}</p>
+                    @endif
+                </div>
+                <div class="field">
+                        <label for="email m-t-20"> Email Address</label>
+                        <div class="control">
+                        <input type="text" class="input {{$errors->has('email') ? 'is-danger' : 'is-info' }}" id='email' name='email' placeholder="Enter Email" value="{{ old('email') }}" required> 
+    
+                        </div>
+                        @if ($errors->has('email'))
+                                <p class="help m-t-5 is-danger">{{$errors->first('email')}}</p>
+                        @endif
+                    </div>
+                <div class="columns">
+                    <div class="column">
+                            <div class="field">
+                                    <label for="password">  Password</label>
+                                    <div class="control">
+                                       <input type="password" name='password' class="input {{$errors->has('password') ? 'is-danger' : 'is-info' }}" id='password' required> 
+                
+                                    </div>
+                                    @if ($errors->has('password'))
+                                        <p class="help m-t-5 is-danger">{{$errors->first('password')}}</p>
+                                    @endif
+                                    
+                            </div>
+                    </div>
+                    <div class="column">
+                            <div class="field">
+                                    <label for="password_confirmation"> Confirm  Password</label>
+                                    <div class="control">
+                                       <input type="password" name='password_confirmation' class="input {{$errors->has('password_confirmation') ? 'is-danger' : 'is-info' }}" id='password_confirmation' required> 
+                
+                                    </div>
+                                    @if ($errors->has('password_confirmation'))
+                                        <p class="help m-t-5 is-danger">{{$errors->first('password_confirmation')}}</p>
+                                    @endif
+                                    
+                            </div>
+                    </div>
+                </div>
+                
+                
+               
+                <button class="button is-info  is-outlined  m-t-20 is-fullwidth">Register </button>
+            </form>
+            </div>
+        <h5 class="has-text-centered"> <a href="{{route('login')}}" class='is-muted'>Already registered? Login</a></h5>
+        </div>
+    </div>
+</div>
+
+
+
+
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -73,5 +143,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection
