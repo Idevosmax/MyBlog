@@ -11088,7 +11088,7 @@ a.navbar-item.is-active,
 .pagination-previous:focus,
 .pagination-next:focus,
 .pagination-link:focus {
-  border-color: #3490dc;
+  border-color: #4dc0b5;
 }
 
 .pagination-previous:active,
@@ -11115,8 +11115,8 @@ a.navbar-item.is-active,
 }
 
 .pagination-link.is-current {
-  background-color: #3490dc;
-  border-color: #3490dc;
+  background-color: #4dc0b5;
+  border-color: #4dc0b5;
   color: #fff;
 }
 
@@ -17437,60 +17437,6 @@ html {
   background-color: whitesmoke;
 }
 
-.dropdown {
-  position: relative;
-}
-
-.dropdown .dropdown-menu {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 102%;
-  z-index: 1000;
-  background-color: white;
-  min-width: 200px;
-  text-align: left;
-  box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
-}
-
-.dropdown .dropdown-menu li.seperator {
-  border-top: 1px solid #cccccc;
-  margin: 5px 0px;
-}
-
-.dropdown .dropdown-menu li > a {
-  margin: 5px 0;
-  padding: 5px 0 5px 10px;
-  display: block;
-}
-
-.dropdown .dropdown-menu li > a:hover {
-  background-color: whitesmoke;
-}
-
-.dropdown.is-alligned-right .dropdown-menu {
-  right: o;
-  left: auto;
-}
-
-.dropdown.is-open .dropdown-menu {
-  display: block;
-}
-
-.dropdown-overflow {
-  overflow: visible;
-}
-
-button.navbar-item {
-  background-color: white;
-  border: none;
-  color: #7a7a7a;
-}
-
-button.navbar-item:hover {
-  color: #363636;
-}
-
 .navbar {
   height: 4.5rem;
 }
@@ -17505,6 +17451,20 @@ button.navbar-item:hover {
 
 .box-shadow-card {
   box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
+}
+
+.navbar-brand .brand-item {
+  margin-right: 0px;
+}
+
+@media screen and (min-width: 1088px) {
+  .navbar-brand .brand-item {
+    margin-right: 15px;
+  }
+}
+
+.navbar-burger {
+  border: none;
 }
 
 .m-t-5 {
@@ -17889,5 +17849,60 @@ button.navbar-item:hover {
 
 .p-r-100 {
   padding-right: 100px !important;
+}
+
+#admin-side-menu {
+  position: fixed;
+  left: -250px;
+  top: 4rem;
+  bottom: 0;
+  width: 250px;
+  background-color: white;
+  overflow-y: scroll;
+  box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
+  transition: left 0.3s ease-in-out;
+}
+
+#admin-side-menu.is-active {
+  transition: left 0.3s ease-in-out;
+  left: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  #admin-side-menu {
+    left: 0;
+  }
+}
+
+#admin-slideout-button {
+  transition: 0.3s;
+}
+
+#admin-slideout-button.is-active {
+  transition: 0.3s;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.management-area {
+  position: absolute;
+  top: 4rem;
+  left: 250px;
+  right: 0;
+}
+
+.flex-container {
+  margin: 10px 25px;
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-list li ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
